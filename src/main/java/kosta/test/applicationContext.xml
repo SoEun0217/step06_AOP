@@ -12,8 +12,9 @@
 
 <!-- aop 를 설정한다... -->
 <aop:config>
-	
-
+	<aop:aspect id="aspect" ref="advice">
+	<aop:around method="around" pointcut="execution(* kosta..*Impl.*(..))"/>
+	</aop:aspect>
 </aop:config>
 
 </beans>
